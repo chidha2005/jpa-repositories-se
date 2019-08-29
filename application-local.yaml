@@ -1,0 +1,18 @@
+spring:
+  profiles: "local"
+  datasource:
+     url: jdbc:oracle:thin:@H2CBXT2.arrownao.corp.arrow.com:1521:XE
+     username: arrow
+     password: arrow
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+     hikari.connection-timeout: 60000
+     hikari.maximum-pool-size: 10
+  jpa:
+     show-sql: true
+     properties.hibernate.format_sql: true
+     hibernate.ddl-auto: create-drop
+     database-platform: org.hibernate.dialect.Oracle10gDialect
+  #data:
+     #rest:
+        #basePath:/api
+  
